@@ -26,6 +26,14 @@ router
 router
   .route("/:id")
   .get(getTrade)
+  .get(
+    "/user/:userId",
+    advancedResults(Trade, {
+      path: "user",
+      select: "username profile",
+    }),
+    getTrades
+  )
   .put(protect, authorize("user", "admin"), updateTrade)
   .delete(protect, authorize("user", "admin"), deleteTrade);
 
