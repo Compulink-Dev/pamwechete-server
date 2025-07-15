@@ -73,6 +73,13 @@ const UserSchema = new mongoose.Schema({
       ref: "Trade",
     },
   ],
+  // In User model
+  receipts: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "Receipt",
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
