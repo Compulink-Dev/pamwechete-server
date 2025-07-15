@@ -30,9 +30,9 @@ router
   .delete(protect, authorize("user", "admin"), deleteTrade);
 
 // Protected routes
-router.use(protect); // All routes below this will be protected
+router.use(protect);
 
-// Add new route for getting trades by user ID
-router.get("/user/:userId", authorize("user", "admin"), getUserTrades);
+// ✅ Fix: Use getTrades instead of missing getUserTrades
+router.get("/user/:userId", authorize("user", "admin"), getTrades);
 
 module.exports = router;
