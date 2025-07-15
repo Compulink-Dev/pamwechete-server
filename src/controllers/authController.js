@@ -56,12 +56,21 @@ exports.login = async (req, res, next) => {
 exports.getMe = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id)
+      .select("-password") // Exclude password
       .populate("trades")
       .populate("receipts");
 
     res.status(200).json({
       success: true,
-      data: user,
+      data: {
+        // Format the response data properly
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        profile: user.profile,
+        role: user.role,
+        // Add any other fields you need
+      },
     });
   } catch (err) {
     next(err);
@@ -80,8 +89,19 @@ const sendTokenResponse = (user, statusCode, res) => {
     secure: process.env.NODE_ENV === "production",
   };
 
-  res.status(statusCode).cookie("token", token, options).json({
-    success: true,
-    token,
-  });
+  res
+    .status(statusCode)
+    .cookie("token", token, options)
+    .json({
+      success: true,
+      token,
+      user: {
+        // Include user data here
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        profile: user.profile,
+        role: user.role,
+      },
+    });
 };
