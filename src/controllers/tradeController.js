@@ -1,6 +1,7 @@
 const Trade = require("../models/Trade");
 const User = require("../models/User");
 const Receipt = require("../models/Receipt");
+const mongoose = require("mongoose");
 const ErrorResponse = require("../utils/errorResponse");
 const { fiscalizeTransaction } = require("../services/zimraService");
 const asyncHandler = require("../middlewares/async");

@@ -66,6 +66,13 @@ const UserSchema = new mongoose.Schema({
     enum: ["user", "admin"],
     default: "user",
   },
+  // In User model
+  trades: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "Trade",
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
