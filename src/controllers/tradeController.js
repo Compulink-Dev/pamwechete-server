@@ -17,9 +17,16 @@ exports.getTrades = asyncHandler(async (req, res, next) => {
       count: trades.length,
       data: trades,
     });
-  } else {
-    res.status(200).json(res.advancedResults);
   }
+  // If user query parameter is provided, validate it
+  if (req.query.user) {
+    if (!mongoose.Types.ObjectId.isValid(req.query.user)) {
+      return next(new ErrorResponse("Invalid user ID", 400));
+    }
+  }
+
+  // Otherwise use advancedResults
+  res.status(200).json(res.advancedResults);
 });
 
 // @desc    Get single trade

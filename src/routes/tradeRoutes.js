@@ -14,7 +14,13 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(advancedResults(Trade, "user"), getTrades)
+  .get(
+    advancedResults(Trade, {
+      path: "user",
+      select: "username profile",
+    }),
+    getTrades
+  )
   .post(protect, authorize("user", "admin"), createTrade);
 
 router
