@@ -1,0 +1,99 @@
+[2025-07-11 12:18:54.639 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:20:28.147 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:20:50.305 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:23:23.405 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:24:06.185 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:25:18.157 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:27:23.747 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+[2025-07-11 12:27:47.319 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/xss-clean/lib/index.js:8:30
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at internalNext (/home/kronos/pamwechete/server/node_modules/helmet/index.cjs:531:6)
+    at xXssProtectionMiddleware (/home/kronos/pamwechete/server/node_modules/helmet/index.cjs:311:3)
+    at internalNext (/home/kronos/pamwechete/server/node_modules/helmet/index.cjs:529:6)
+    at xPoweredByMiddleware (/home/kronos/pamwechete/server/node_modules/helmet/index.cjs:304:3)
+[2025-07-11 12:31:22.011 AM] [31merror[39m: 	TypeError: Cannot set property query of #<IncomingMessage> which has only a getter
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:113:18
+    at Array.forEach (<anonymous>)
+    at /home/kronos/pamwechete/server/node_modules/express-mongo-sanitize/index.js:110:44
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/home/kronos/pamwechete/server/node_modules/router/index.js:342:13)
+    at /home/kronos/pamwechete/server/node_modules/router/index.js:297:9
+    at processParams (/home/kronos/pamwechete/server/node_modules/router/index.js:582:12)
+    at next (/home/kronos/pamwechete/server/node_modules/router/index.js:291:5)
+    at logger (/home/kronos/pamwechete/server/node_modules/morgan/index.js:144:5)
+    at Layer.handleRequest (/home/kronos/pamwechete/server/node_modules/router/lib/layer.js:152:17)
