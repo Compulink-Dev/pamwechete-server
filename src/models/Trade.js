@@ -21,10 +21,13 @@ const TradeSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please add a description"],
   },
-  categories: {
-    type: [String],
-    required: true,
-  },
+  categories: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "Category",
+      required: true,
+    },
+  ],
   items: [
     {
       name: String,

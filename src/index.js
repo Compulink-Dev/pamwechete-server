@@ -21,6 +21,7 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const tradeRoutes = require("./routes/tradeRoutes");
 const aiRoutes = require("./routes/aiRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 
 const app = express();
 
@@ -57,6 +58,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/trades", tradeRoutes);
 app.use("/api/v1/ai", aiRoutes);
+app.use("/api/v1/categories", categoryRoutes);
 
 // 9. Error handler (must be last)
 app.use(errorHandler);

@@ -12,7 +12,9 @@ const asyncHandler = require("../middlewares/async");
 // @access  Public
 exports.getTrades = asyncHandler(async (req, res, next) => {
   if (req.params.userId) {
-    const trades = await Trade.find({ user: req.params.userId });
+    const trades = await Trade.find({ user: req.params.userId })
+      .populate("user", "username profile")
+      .populate("categories", "name slug");
     return res.status(200).json({
       success: true,
       count: trades.length,
@@ -34,10 +36,9 @@ exports.getTrades = asyncHandler(async (req, res, next) => {
 // @route   GET /api/v1/trades/:id
 // @access  Public
 exports.getTrade = asyncHandler(async (req, res, next) => {
-  const trade = await Trade.findById(req.params.id).populate({
-    path: "user",
-    select: "username profile",
-  });
+  const trade = await Trade.findById(req.params.id)
+    .populate({ path: "user", select: "username profile" })
+    .populate({ path: "categories", select: "name slug" });
 
   if (!trade) {
     return next(
@@ -57,6 +58,22 @@ exports.getTrade = asyncHandler(async (req, res, next) => {
 exports.createTrade = asyncHandler(async (req, res, next) => {
   // Add user to req.body
   req.body.user = req.user.id;
+
+  // Validate and map category slugs/names to ObjectIds
+  if (!Array.isArray(req.body.categories) || req.body.categories.length === 0) {
+    return next(new ErrorResponse("At least one category is required", 400));
+  }
+
+  // Assume frontend sends slugs, e.g., ['electronics', 'phones']
+  const foundCategories = await Category.find({
+    slug: { $in: req.body.categories },
+  });
+
+  if (foundCategories.length !== req.body.categories.length) {
+    return next(new ErrorResponse("One or more categories not found", 400));
+  }
+
+  req.body.categories = foundCategories.map((cat) => cat._id);
 
   const trade = await Trade.create(req.body);
 
