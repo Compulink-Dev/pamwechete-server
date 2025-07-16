@@ -16,6 +16,8 @@ exports.getTrades = asyncHandler(async (req, res, next) => {
 
   if (req.params.userId) {
     query = Trade.find({ user: req.params.userId });
+  } else if (req.query.user) {
+    query = Trade.find({ user: req.query.user });
   } else {
     query = Trade.find();
   }
