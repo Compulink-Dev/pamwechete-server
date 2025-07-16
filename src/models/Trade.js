@@ -80,6 +80,10 @@ const TradeSchema = new mongoose.Schema({
   },
 });
 
+TradeSchema.methods.calculateTotalValue = function () {
+  return this.items.reduce((sum, item) => sum + (item.value || 0), 0);
+};
+
 // Geocode & create location field
 TradeSchema.pre("save", async function (next) {
   // Add your geocoding logic here
