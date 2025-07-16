@@ -31,6 +31,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
 
+// Trust first poxy
+app.set("trust proxy", 1);
+
 // 2. CORS - Should come before other security middlewares
 app.use(cors());
 
