@@ -48,11 +48,13 @@ const TradeSchema = new mongoose.Schema({
     duration: Number, // in hours
     skillsRequired: [String],
     price: Number, // Add this field for service pricing
-    priceType: { // Optional: hourly, fixed, etc.
+    priceType: {
+      // Optional: hourly, fixed, etc.
       type: String,
       enum: ["hourly", "fixed", "negotiable"],
-      default: "fixed"
+      default: "fixed",
     },
+  },
   cashAmount: {
     type: Number,
     default: 0,
