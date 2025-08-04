@@ -22,6 +22,7 @@ const userRoutes = require("./routes/userRoutes");
 const tradeRoutes = require("./routes/tradeRoutes");
 const aiRoutes = require("./routes/aiRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
+const favoriteRoutes = require("./routes/favoriteRoutes");
 
 const app = express();
 
@@ -62,6 +63,7 @@ app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/trades", tradeRoutes);
 app.use("/api/v1/ai", aiRoutes);
 app.use("/api/v1/categories", categoryRoutes);
+app.use("/api/v1/favorites", favoriteRoutes);
 
 // 9. Error handler (must be last)
 app.use(errorHandler);
