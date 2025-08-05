@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { protect } = require("../middlewares/auth.js");
 const Favorite = require("../models/Favorite.js");
+const Trade = require("../models/Trade.js");
 
 // @desc    Add trade to favorites
 // @route   POST /api/v1/favorites
@@ -10,7 +11,13 @@ router.post("/", protect, async (req, res) => {
   try {
     const { tradeId } = req.body;
 
-    // Validate trade exists
+    if (!tradeId) {
+      return res.status(400).json({
+        success: false,
+        error: "Trade ID is required",
+      });
+    }
+
     const trade = await Trade.findById(tradeId);
     if (!trade) {
       return res.status(404).json({
@@ -19,7 +26,6 @@ router.post("/", protect, async (req, res) => {
       });
     }
 
-    // Check if already favorited
     const existingFavorite = await Favorite.findOne({
       user: req.user.id,
       trade: tradeId,
@@ -37,7 +43,6 @@ router.post("/", protect, async (req, res) => {
       trade: tradeId,
     });
 
-    // Populate the trade data in the response
     await favorite.populate("trade");
 
     res.status(201).json({
@@ -45,10 +50,11 @@ router.post("/", protect, async (req, res) => {
       data: favorite,
     });
   } catch (err) {
-    console.error(err);
+    console.error("Error in favorites POST:", err);
     res.status(500).json({
       success: false,
       error: "Server Error",
+      message: err.message, // Send the actual error message
     });
   }
 });
